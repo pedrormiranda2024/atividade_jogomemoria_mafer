@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="jogo.css"></script>
+    <link rel="stylesheet" href="jogo.css">
+    <title>Jogo da memória</title>
+
+</head>
+
+<body>
+
+    <header>
+        <img class="imagem_botafogo"
+            src="https://meubotafogo.com.br/wp-content/uploads/2024/12/botafogo-campeao-brasileiro-2024.webp" alt="">
+        <h1 class="xogo">JOGO DA MEMÓRIA </h1>
+    </header>
+    <main>
+        <p id="texto">
+            - Este é o texto revelado!
+        </p>
+        <div class="imagens">
+
+            <a id="carro" href="jogodois.html"><img onmouseover="mudarTextoCarro()"
+                onmouseout="esconderTexto()" src="carro.png" alt="">
+
+            </a>
+            <a id="moto" href="jogodois.html"><img onmouseover="mudarTextoMoto()"  onmouseout="esconderTexto()" src=" moto.png" alt=""></a>
+            <a id="jetski" href="jogodois.html"><img onmouseover="mudarTextoJetski()"  onmouseout="esconderTexto()" src="jetski.png" alt=""></a>
+        </div>
+    </main>
+    </main>
+    <footer>
+        <p> Maria Fernanda Machado</p>
+
+
+    </footer>
+    <script>
+        function mudarTextoCarro() {
+            const texto = document.getElementById("texto");
+            texto.innerHTML = "Carro";
+            texto.style.setProperty('visibility', 'visible');
+        }
+        function mudarTextoMoto() {
+            const texto = document.getElementById("texto");
+            texto.innerHTML = "Moto";
+            texto.style.setProperty('visibility', 'visible');
+        }
+        function mudarTextoJetski() {
+            const texto = document.getElementById("texto");
+            texto.innerHTML = "Jetski";
+            texto.style.setProperty('visibility', 'visible');
+        }
+        function esconderTexto() {
+            const texto = document.getElementById("texto");
+            texto.style.setProperty('visibility', 'hidden');
+        }
+
+    </script>
+</body>
+
+</html>
